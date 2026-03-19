@@ -1,0 +1,130 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 20px 0;
+  transition: all 0.3s ease;
+}
+
+.navbar--scrolled {
+  background: rgba(10, 10, 15, 0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--trio-border);
+  padding: 14px 0;
+}
+
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 20px;
+  color: var(--trio-white);
+  letter-spacing: -0.02em;
+}
+
+.navbar__logo-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: var(--trio-accent);
+  border-radius: 8px;
+  color: white;
+}
+
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
+}
+
+.navbar__link {
+  background: none;
+  border: none;
+  color: var(--trio-text-dim);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  transition: all 0.2s;
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+.navbar__link:hover {
+  color: var(--trio-text);
+  background: var(--trio-surface);
+}
+
+.navbar__cta {
+  font-size: 13px;
+  padding: 10px 20px;
+  margin-left: 8px;
+}
+
+.navbar__burger {
+  display: none;
+  background: none;
+  border: 1px solid var(--trio-border);
+  color: var(--trio-text);
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+}
+
+.navbar__mobile {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 24px 20px;
+  border-top: 1px solid var(--trio-border);
+  background: rgba(10, 10, 15, 0.95);
+  backdrop-filter: blur(20px);
+}
+
+.navbar__mobile-link {
+  background: none;
+  border: none;
+  color: var(--trio-text-dim);
+  font-size: 16px;
+  font-weight: 500;
+  padding: 14px 0;
+  text-align: left;
+  border-bottom: 1px solid var(--trio-border);
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: color 0.2s;
+}
+
+.navbar__mobile-link:last-child {
+  border-bottom: none;
+}
+
+.navbar__mobile-link:hover {
+  color: var(--trio-accent);
+}
+
+@media (max-width: 768px) {
+  .navbar__links,
+  .navbar__cta {
+    display: none;
+  }
+
+  .navbar__burger {
+    display: flex;
+  }
+}
